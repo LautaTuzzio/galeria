@@ -19,7 +19,7 @@ Una galeria de imagenes interactiva con caracteristicas multimedia, incluyendo u
 
 ## Como Ejecutar
 1. Clona o descarga el repositorio
-2. Abre el archivo [index.html](cci:7://file:///c:/Users/Alumnos/slider/index.html:0:0-0:0) en tu navegador web
+2. Abre el archivo `index.html` en tu navegador web
 3. La aplicacion se ejecutara automaticamente
 
 ## Requisitos
@@ -29,4 +29,3 @@ Una galeria de imagenes interactiva con caracteristicas multimedia, incluyendo u
 ## Notas
 - El modo oscuro persiste entre sesiones
 - Las imagenes se cargan dinamicamente
-- La interfaz es completamente responsiva
