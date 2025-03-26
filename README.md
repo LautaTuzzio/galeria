@@ -19,7 +19,7 @@ Una galeria de imagenes interactiva con caracteristicas multimedia, incluyendo u
 
 ## Como Ejecutar
 1. Clona o descarga el repositorio
-2. Abre el archivo `index.html` en tu navegador web
+2. Abre el archivo `index.html` en tu zip descargado
 3. La aplicacion se ejecutara automaticamente
 
 ## Requisitos
