@@ -30,4 +30,3 @@ Una galeria de imagenes interactiva con caracteristicas multimedia, incluyendo u
 - El modo oscuro persiste entre sesiones
 - Las imagenes se cargan dinamicamente
 
-![Pantalla Completa](https://via.placeholder.com/800x600?text=Vista+Completa)
