@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria de Imagenes</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="transition-colors duration-300 bg-white text-black dark:bg-gray-900 dark:text-white">
+    <div class="container mx-auto p-4">
+        <div class="flex justify-between items-center mb-4">
+            <h1 class="text-2xl font-bold">Galeria de Imagenes</h1>
+            <button id="darkModeToggle" class="px-4 py-2 bg-gray-200 dark:bg-gray-700 rounded">
+                <i id="darkModeIcon" class="fas fa-moon"></i>
+            </button>
+        </div>
+
+        <div class="relative h-[70vh]">
+            <div id="imageCarousel" class="w-full h-full overflow-hidden relative">
+                <img id="carouselImage" src="" alt="Imagen del carrusel" class="w-full h-full object-cover absolute top-0 left-0 transition-opacity duration-500">
+            </div>
+            <button id="prevBtn" class="absolute left-2 top-1/2 transform -translate-y-1/2 bg-black/50 text-white p-2 rounded-full">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button id="nextBtn" class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-black/50 text-white p-2 rounded-full">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+
+        <div id="thumbnails" class="flex space-x-2 mt-4 overflow-hiddden">
+            <!-- Las miniaturas se generaran dinamicamente con JS -->
+        </div>
+
+        <audio id="backgroundMusic" class="w-full m-20">
+            <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+            Tu navegador no soporta el elemento de audio.
+        </audio>
+        <div class="flex items-center space-x-4 pt-4">
+            <button id="playPauseBtn" class="px-4 py-2 bg-blue-500 text-white dark:bg-blue-600 rounded">
+                <i class="fas fa-play"></i>
+            </button>
+            <input type="range" id="progressBar" class="w-full" min="0" max="100" value="0">
+            <div class="flex items-center space-x-2">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="dark:stroke-white">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                    <g id="SVGRepo_iconCarrier">
+                        <path d="M19 6C20.5 7.5 21 10 21 12C21 14 20.5 16.5 19 18M16 8.99998C16.5 9.49998 17 10.5 17 12C17 13.5 16.5 14.5 16 15M3 10.5V13.5C3 14.6046 3.5 15.5 5.5 16C7.5 16.5 9 21 12 21C14 21 14 3 12 3C9 3 7.5 7.5 5.5 8C3.5 8.5 3 9.39543 3 10.5Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </g>
+                </svg>               
+                <input type="range" id="volumeControl" min="0" max="1" step="0.1" value="1" class="w-28">
+            </div>
+        </div>
+
+        <!-- Modal de imagen en pantalla completa -->
+        <div id="fullscreenModal" class="fixed inset-0 bg-black/80 z-50 hidden flex items-center justify-center">
+            <img id="fullscreenImage" src="" alt="Imagen en pantalla completa" class="max-w-full max-h-full">
+            <button id="closeModalBtn" class="absolute top-4 right-4 text-white text-3xl">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+    </div>
+
+    <script src="./script/script.js"></script>
+</body>
+
+</html>
